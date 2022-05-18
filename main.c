@@ -3,6 +3,7 @@
 
 #include "bubble_sort.h"
 #include "selection.h"
+#include "insertion.h"
 
 #define N 20
 
@@ -27,6 +28,13 @@ int main(){
 
 	selectionSort(array, N);
 	whatSort("Non-recursive selection-sort :", array, N);
+
+	recursiveInsertionSort(array, N);
+	whatSort("Recursive insertion-sort :", array, N);
+
+	insertionSort(array, N);
+	whatSort("Non-recursive insertion-sort :", array, N);
+
 
 	return 0;
 }
