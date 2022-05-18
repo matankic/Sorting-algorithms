@@ -4,6 +4,7 @@
 #include "bubble_sort.h"
 #include "selection.h"
 #include "insertion.h"
+#include "merge_sort.h"
 
 #define N 20
 
@@ -35,6 +36,8 @@ int main(){
 	insertionSort(array, N);
 	whatSort("Non-recursive insertion-sort :", array, N);
 
+	mergeSort(array, 0, N);
+	whatSort("(recursive) merge-sort :", array, N);
 
 	return 0;
 }
