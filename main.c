@@ -13,6 +13,7 @@ void shuffleArr(int *, int);
 void whatSort(const char *, int *, int);
 
 int main(){
+	srand(time(NULL));
 	int array[N];
 	shuffleArr(array, N);
 	printf("Shuffled array :\n");
@@ -39,6 +40,9 @@ int main(){
 	mergeSort(array, 0, N);
 	whatSort("(recursive) merge-sort :", array, N);
 
+	quickSort(array, N);
+	whatSort("(recursive) quick-sort :", array, N);
+
 	return 0;
 }
 
@@ -48,7 +52,6 @@ void printArr(int *arr, int n){
 	printf("\n\n");
 }
 void shuffleArr(int *arr, int n){
-	srand(time(NULL));
 	for(int i = 0; i < n; i++){
 		arr[i] = i;
 	}
