@@ -2,6 +2,7 @@
 #include<time.h>
 
 #include "bubble_sort.h"
+#include "selection.h"
 
 #define N 20
 
@@ -20,6 +21,12 @@ int main(){
 
 	BubbleSort(array, N);
 	whatSort("Non-recursive bubble-sort :", array, N);
+
+	recursiveSelectionSort(array, N);
+	whatSort("Recursive selection-sort :", array, N);
+
+	selectionSort(array, N);
+	whatSort("Non-recursive selection-sort :", array, N);
 
 	return 0;
 }
