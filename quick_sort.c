@@ -1,12 +1,6 @@
 #include "quick_sort.h"
 #include <time.h>
 
-void swap(int *p, int *q){
-	int tmp = *p;
-	*p = *q;
-	*q = tmp;
-}
-
 void partition(int *arr, int n){
 	srand(time(NULL));
 	if (n <= 1)
@@ -39,4 +33,10 @@ void partition(int *arr, int n){
 }
 void quickSort(int *arr, int n){
 	partition(arr, n);
+}
+
+void swap(int *p, int *q){
+	int tmp = *p;
+	*p = *q;
+	*q = tmp;
 }

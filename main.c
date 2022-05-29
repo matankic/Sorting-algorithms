@@ -43,6 +43,9 @@ int main(){
 	quickSort(array, N);
 	whatSort("(recursive) quick-sort :", array, N);
 
+	heapSort(array, N);
+	whatSort("heap-sort :", array, N);
+
 	return 0;
 }
 
